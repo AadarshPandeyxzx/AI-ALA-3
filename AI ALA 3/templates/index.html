@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMIU College Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="chat-header">
+            <div class="brand-logo">G</div>
+            <div class="header-text">
+                <h1>GMIU Assistant</h1>
+                <p>Gyanmanjari Innovative University</p>
+            </div>
+        </header>
+
+        <main class="chat-container">
+
+            <div class="welcome-section">
+                <h2>Welcome to GMIU!</h2>
+                <p>Ask me about courses, admissions, fees, placements, or contact details.</p>
+            </div>
+
+            <div class="quick-questions">
+                <button type="button" class="quick-btn" data-question="Show me all courses">
+                    All Courses
+                </button>
+                <button type="button" class="quick-btn" data-question="How can I apply for admission?">
+                    Admissions
+                </button>
+                <button type="button" class="quick-btn" data-question="Tell me about fees">
+                    Fees
+                </button>
+                <button type="button" class="quick-btn" data-question="Tell me about placements">
+                    Placements
+                </button>
+                <button type="button" class="quick-btn" data-question="Give me contact details">
+                    Contact
+                </button>
+            </div>
+
+            <div id="messages" class="messages">
+                <div class="message-row bot-row">
+                    <div class="message bot-message">
+                        Hello! Welcome to GMIU. How can I help you today?
+                    </div>
+                </div>
+            </div>
+
+            <form id="chat-form" class="chat-form">
+                <input
+                    type="text"
+                    id="user-input"
+                    placeholder="Ask your question..."
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" id="send-btn">Send</button>
+            </form>
+
+            <p class="footer-text">GMIU Virtual Assistant</p>
+
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
